@@ -11,6 +11,12 @@
         <div class="g-signin2" data-onsuccess="onSignIn" data-width="240" data-height="50" data-longtitle="true"></div>
     </div>
     <script>
+        window.gapi.client
+        .init({
+          clientId:'775540633379-mg0vrjq546pn65ng7fsbvv1p0qpvg4t9.apps.googleusercontent.com',
+          scope: "email",
+          plugin_name:'App Name that you used in google developer console API'
+        })
        function onSignIn(googleUser) {
             var profile = googleUser.getBasicProfile();
             console.log('Name: ' + profile.getName());
